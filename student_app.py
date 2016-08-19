@@ -1,4 +1,4 @@
-
+from datetime import date
 from student import Student
 
 # Create at least 10 students
@@ -14,13 +14,22 @@ s8 = Student('Mike', 'Dean')
 s9 = Student('Steve', 'Njoro')
 s10 = Student('Lucious', 'Lyon')
 
+
+print(s1.id)
+print(s2.id)
+print(s3.id)
+
 # Make at least 5 students attend class
+today = str(date.today())
+print(s3.attend_class(location='Dojo', date='2016-08-05', teacher='Mururi'))
+print(s7.attend_class(location='Valhalla', date=today, teacher='Maxwell'))
+print(s4.attend_class(location='Lionden', date='2016-08-14', teacher='Ned'))
+# make a student have default values
+print(s1.attend_class())
+print(s8.attend_class(location='Ovaloffice', date=today, teacher='Frankie'))
+    
 
-# e.g
-s1.attend_class(...)
-
-
-
-# You should be able to print the list of
-# students who attend class on particular day
-
+# You should be able to print the list of students who attend class on a particular day
+print()
+print(Student.get_attendance_list())
+print()
